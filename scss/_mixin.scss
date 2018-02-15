@@ -1,0 +1,19 @@
+@mixin title{
+  width: 95%;
+  margin: 0 auto;
+  padding-top: 50px;
+
+  text-align: center;
+
+  .title__name {
+    margin-bottom: 10px;
+  }
+
+  @media ( min-width: 960px) {
+  padding-top: 111px;
+
+  .title__name {
+    margin-bottom: 12px;
+  }
+  }
+}
