@@ -3,27 +3,32 @@ doctype html
 html(lang='en')
   head
     title Jade
-
   body
-  -
-               var category= [
-                {name: 'Address', text: '66, Dang Van ngu, Dong Da, Ha noi, Vietnam'},
-                {name: 'E-mail', text: 'contach@halovietnam.com'},
-                {name: 'Phone', text: '+844 1234 56789'}
-              ]
     section 
       .contact
         .container
-          h2.title__name Keep in touch with us
+          h2.title__name  Keep in touch with us
           p.title__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus tristique bibendum. Donec rutrum sed sem quis venenatis.
-          .row.row_flex.contact__row_flex
-    
-            
-            
-            each val in category
+ 
+          -
+            var category= [{
+              name: "Address",
+              text: "66, Dang Van ngu, Dong Da, Ha noi, Vietnam"
+              }, {
+              name: "E-mail",
+              text: "contach@halovietnam.com"
+              }, {
+              name: "Phone",
+              text: "+844 1234 56789" 
+              }];
+
+          .row.row_flex.contact__row_flex  
+            each  val in  category
               .contact-item
-                p.contact-item__name= val.name
-                p.contact-item__text= val.text
+                p.contact-item__name= val. name
+                p.contact-item__name= val. text
+ 
+            
   
            
            
